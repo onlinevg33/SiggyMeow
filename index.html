@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Siggy AI Agent</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+}
+
+h1{
+font-size:48px;
+}
+
+.chatbox{
+width:400px;
+margin:auto;
+margin-top:30px;
+}
+
+input{
+width:70%;
+padding:10px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 16px;
+border:none;
+border-radius:8px;
+background:#22c55e;
+color:white;
+cursor:pointer;
+}
+
+.message{
+margin-top:10px;
+}
+
+.siggy{
+color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🐈‍⬛ Siggy AI Agent</h1>
+
+<p>The cutest AI exploring Ritual & Web3</p>
+
+<div class="chatbox">
+
+<input id="userInput" placeholder="Ask Siggy something..." />
+
+<button onclick="talk()">Send</button>
+
+<div id="chat"></div>
+
+</div>
+
+<script>
+
+function talk(){
+
+let input = document.getElementById("userInput").value
+
+let chat = document.getElementById("chat")
+
+chat.innerHTML += "<div class='message'>You: "+input+"</div>"
+
+let response=""
+
+if(input.toLowerCase().includes("ritual")){
+response="Ritual is an infrastructure that enables verifiable AI on blockchain."
+}
+
+else if(input.toLowerCase().includes("hello")){
+response="Hi fren 🐾 I'm Siggy!"
+}
+
+else{
+response="I'm still learning. Ask me about Ritual or Web3!"
+}
+
+chat.innerHTML += "<div class='message siggy'>Siggy: "+response+"</div>"
+
+}
+
+</script>
+
+</body>
+
+</html>
