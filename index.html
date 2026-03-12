@@ -15,30 +15,45 @@ text-align:center;
 padding:40px;
 }
 
+.siggy-avatar{
+width:120px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
 h1{
 font-size:48px;
+margin-top:10px;
+}
+
+p{
+color:#cbd5f5;
 }
 
 .chatbox{
-width:400px;
+width:420px;
 margin:auto;
 margin-top:30px;
 }
 
 input{
 width:70%;
-padding:10px;
-border-radius:8px;
+padding:12px;
+border-radius:10px;
 border:none;
 }
 
 button{
-padding:10px 16px;
+padding:12px 18px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 background:#22c55e;
 color:white;
 cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
 }
 
 .message{
@@ -55,13 +70,15 @@ color:#22c55e;
 
 <body>
 
-<h1>🐈‍⬛ Siggy AI Agent</h1>
+<img src="siggy.png" class="siggy-avatar">
+
+<h1>Siggy AI Agent</h1>
 
 <p>The cutest AI exploring Ritual & Web3</p>
 
 <div class="chatbox">
 
-<input id="userInput" placeholder="Ask Siggy something..." />
+<input id="userInput" placeholder="Ask Siggy something...">
 
 <button onclick="talk()">Send</button>
 
@@ -82,11 +99,15 @@ chat.innerHTML += "<div class='message'>You: "+input+"</div>"
 let response=""
 
 if(input.toLowerCase().includes("ritual")){
-response="Ritual is an infrastructure that enables verifiable AI on blockchain."
+response="Ritual is infrastructure that enables verifiable AI on blockchain."
 }
 
 else if(input.toLowerCase().includes("hello")){
 response="Hi fren 🐾 I'm Siggy!"
+}
+
+else if(input.toLowerCase().includes("siggy")){
+response="I'm Siggy, your cute AI exploring Ritual and Web3."
 }
 
 else{
